@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="衣本万利——服装、鞋包与零售店主的一站式进销存工具。拍照建档、扫码销售、库存管理与经营统计，一部手机管清生意。">
+  <meta name="theme-color" content="#f6efe2">
+  <meta property="og:title" content="衣本万利｜一部手机，管清生意">
+  <meta property="og:description" content="为服装、鞋包与零售店主打造的简单进销存 App。">
+  <meta property="og:image" content="assets/app-icon.png">
+  <title>衣本万利｜服装店进销存管理 App</title>
+  <link rel="icon" href="assets/app-icon.png">
+  <style>
+    :root{--red:#e8492d;--red-dark:#c9341f;--ink:#211c19;--brown:#554940;--muted:#7f746b;--cream:#f6efe2;--paper:#fffaf0;--green:#164e3d;--line:rgba(61,43,32,.12);--shadow:0 30px 80px rgba(63,40,23,.14)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit;text-decoration:none}button,a{tap-highlight-color:transparent}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+    .nav{height:84px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:20}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}.brand img{width:44px;height:44px;border-radius:12px;box-shadow:0 8px 22px rgba(232,73,45,.22)}.nav-links{display:flex;align-items:center;gap:30px;font-size:14px;color:var(--brown)}.nav-download{padding:11px 19px;border:1px solid var(--ink);border-radius:999px;font-weight:700;transition:.2s}.nav-download:hover{background:var(--ink);color:#fff;transform:translateY(-1px)}
+    .hero{min-height:720px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:40px;padding:54px 0 90px;position:relative}.hero:before{content:"";position:absolute;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(232,73,45,.15),rgba(232,73,45,0) 68%);right:-260px;top:-160px;pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border-radius:99px;background:rgba(232,73,45,.09);color:var(--red-dark);font-size:13px;font-weight:700}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red)}h1{font-size:clamp(54px,7vw,88px);line-height:.98;letter-spacing:-.065em;margin:24px 0 25px;max-width:700px}h1 span{display:block;color:var(--red)}.hero-copy>p{font-size:19px;line-height:1.85;color:var(--brown);max-width:590px;margin:0 0 32px}.actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.appstore{display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:12px 22px 12px 17px;border-radius:15px;transition:.25s;box-shadow:0 14px 32px rgba(33,28,25,.18)}.appstore:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(33,28,25,.26)}.apple{font-size:34px;line-height:1}.appstore small{display:block;font-size:10px;letter-spacing:.08em}.appstore strong{display:block;font-size:19px;line-height:1.05}.learn{padding:16px 18px;color:var(--brown);font-weight:700}.facts{display:flex;gap:25px;margin-top:35px;color:var(--muted);font-size:13px}.facts span{display:flex;align-items:center;gap:7px}.facts span:before{content:"✓";display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#fff;color:var(--green);font-weight:900}
+    .visual{height:620px;position:relative;display:grid;place-items:center}.phone{position:absolute;width:260px;border:7px solid #171412;border-radius:42px;background:#171412;box-shadow:var(--shadow);overflow:hidden;transform:rotate(4deg);z-index:3}.phone img{display:block;width:100%}.phone.back{width:230px;transform:translate(-145px,42px) rotate(-9deg);z-index:2;filter:saturate(.9);opacity:.96}.orbit{position:absolute;width:500px;height:500px;border:1px solid rgba(56,39,28,.12);border-radius:50%}.orbit:after,.orbit:before{content:"";position:absolute;border-radius:50%;background:var(--red)}.orbit:before{width:16px;height:16px;right:36px;top:80px}.orbit:after{width:9px;height:9px;left:36px;bottom:115px;background:var(--green)}
+    .marquee{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;transform:rotate(-1deg);width:102%;margin-left:-1%}.marquee-track{display:inline-flex;gap:36px;padding:17px 0;font-size:14px;font-weight:700;letter-spacing:.12em;animation:scroll 22s linear infinite}.marquee i{color:var(--red);font-style:normal}@keyframes scroll{to{transform:translateX(-50%)}}
+    section{scroll-margin-top:40px}.features{padding:130px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}.section-head h2{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-.045em;margin:0}.section-head p{max-width:430px;color:var(--muted);line-height:1.8;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{min-height:320px;border-radius:28px;background:rgba(255,250,240,.68);border:1px solid rgba(255,255,255,.75);padding:32px;position:relative;overflow:hidden;transition:.3s}.card:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(64,43,29,.1)}.card:first-child{grid-column:span 2;background:var(--red);color:#fff}.card:nth-child(4){grid-column:span 2;background:var(--green);color:#fff}.num{font:700 12px/1 monospace;opacity:.7}.card h3{font-size:29px;letter-spacing:-.035em;margin:55px 0 12px;max-width:360px}.card p{line-height:1.75;opacity:.76;margin:0;max-width:440px}.card .glyph{position:absolute;right:26px;top:22px;font-size:45px;opacity:.92}.card:first-child .glyph,.card:nth-child(4) .glyph{font-size:90px;right:42px;bottom:24px;top:auto;opacity:.22}
+    .showcase{background:#dfd6c7;padding:110px 0;overflow:hidden}.showcase .section-head{margin-bottom:60px}.screens{display:flex;gap:24px;align-items:center;justify-content:center}.screen{width:245px;flex:none;border-radius:30px;overflow:hidden;box-shadow:0 25px 70px rgba(38,30,23,.2);transition:.3s}.screen:nth-child(2),.screen:nth-child(4){transform:translateY(30px)}.screen:hover{transform:translateY(-8px) rotate(-1deg)}.screen img{display:block;width:100%}
+    .local{padding:130px 0}.local-box{background:var(--ink);color:#fff;border-radius:40px;padding:72px;display:grid;grid-template-columns:1fr .85fr;gap:60px;align-items:center;position:relative;overflow:hidden}.local-box:after{content:"衣";position:absolute;right:-35px;bottom:-150px;font-size:430px;line-height:1;color:rgba(255,255,255,.025);font-weight:900}.local h2{font-size:clamp(42px,5vw,65px);line-height:1.06;letter-spacing:-.05em;margin:0 0 24px}.local p{color:#cfc7c0;line-height:1.85}.checks{display:grid;gap:12px;position:relative;z-index:2}.check{display:flex;align-items:center;justify-content:space-between;padding:17px 20px;border:1px solid rgba(255,255,255,.12);border-radius:16px;color:#e9e2dc}.check b{display:grid;place-items:center;width:27px;height:27px;background:var(--green);border-radius:50%;color:#fff}
+    .cta{padding:40px 0 130px}.cta-box{text-align:center;border-radius:40px;background:var(--paper);padding:90px 30px;position:relative;overflow:hidden}.cta-box:before{content:"";position:absolute;width:370px;height:370px;border-radius:50%;background:rgba(232,73,45,.1);left:-180px;top:-230px}.cta-box h2{font-size:clamp(42px,6vw,72px);line-height:1.05;letter-spacing:-.055em;margin:0 0 18px}.cta-box p{color:var(--muted);font-size:18px;margin-bottom:30px}
+    footer{border-top:1px solid var(--line);padding:35px 0 45px}.footer-inner{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:13px}.footer-links{display:flex;gap:24px}.footer-links a:hover{color:var(--red)}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:35px}.hero-copy{text-align:center}.hero-copy>p{margin-left:auto;margin-right:auto}.actions,.facts{justify-content:center}.visual{height:560px}.section-head{display:block}.section-head p{margin-top:18px}.cards{grid-template-columns:1fr 1fr}.card:first-child,.card:nth-child(4){grid-column:auto}.screens{justify-content:flex-start;overflow-x:auto;padding:20px 24px 70px;margin:0 -24px;scroll-snap-type:x mandatory}.screen{scroll-snap-align:center}.local-box{grid-template-columns:1fr;padding:52px}.nav-links a:not(.nav-download){display:none}}
+    @media(max-width:620px){.wrap{width:min(100% - 32px,1180px)}.nav{height:72px}.brand img{width:39px;height:39px}.hero{padding-bottom:55px;gap:10px}.hero h1{font-size:53px}.hero-copy>p{font-size:16px}.facts{gap:10px;flex-direction:column;align-items:center}.visual{height:490px}.phone{width:215px}.phone.back{width:190px;transform:translate(-100px,40px) rotate(-8deg)}.orbit{width:390px;height:390px}.features,.local{padding:90px 0}.cards{grid-template-columns:1fr}.card{min-height:270px}.card h3{margin-top:42px}.showcase{padding:85px 0}.screen{width:215px}.local-box{padding:40px 24px;border-radius:28px;gap:30px}.cta{padding-bottom:90px}.cta-box{padding:65px 22px;border-radius:28px}.footer-inner{display:block;text-align:center}.footer-links{justify-content:center;margin-top:16px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-track{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+  <nav class="nav wrap">
+    <a class="brand" href="#top"><img src="assets/app-icon.png" alt="衣本万利图标"><span>衣本万利</span></a>
+    <div class="nav-links"><a href="#features">核心功能</a><a href="#screens">界面预览</a><a href="index.html">隐私政策</a><a class="nav-download" href="https://apps.apple.com/app/%E8%A1%A3%E6%9C%AC%E4%B8%87%E5%88%A9/id6796260393" target="_blank" rel="noopener">立即下载</a></div>
+  </nav>
+
+  <main id="top">
+    <header class="hero wrap">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">为实体零售店主而生</div>
+        <h1>一部手机，<span>管清生意。</span></h1>
+        <p>从拍照建档、扫码销售到库存与利润统计，把每天繁琐的店务装进一个简单好用的 App。服装、鞋包、饰品小店，都能轻松上手。</p>
+        <div class="actions">
+          <a class="appstore" href="https://apps.apple.com/app/%E8%A1%A3%E6%9C%AC%E4%B8%87%E5%88%A9/id6796260393" target="_blank" rel="noopener" aria-label="前往 App Store 下载衣本万利"><span class="apple"></span><span><small>Download on the</small><strong>App Store</strong></span></a>
+          <a class="learn" href="#features">看看能做什么 ↓</a>
+        </div>
+        <div class="facts"><span>无需注册</span><span>数据存本机</span><span>无广告追踪</span></div>
+      </div>
+      <div class="visual reveal">
+        <div class="orbit"></div>
+        <div class="phone back"><img src="assets/camera.jpg" alt="衣本万利拍照录商品界面" width="640" height="1385" loading="eager"></div>
+        <div class="phone"><img src="assets/dashboard.jpg" alt="衣本万利今日经营看板" width="640" height="1385" loading="eager"></div>
+      </div>
+    </header>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>拍照建档</span><i>✦</i><span>扫码销售</span><i>✦</i><span>库存管理</span><i>✦</i><span>经营统计</span><i>✦</i><span>标签打印</span><i>✦</i><span>本地存储</span><i>✦</i><span>拍照建档</span><i>✦</i><span>扫码销售</span><i>✦</i><span>库存管理</span><i>✦</i><span>经营统计</span><i>✦</i><span>标签打印</span><i>✦</i><span>本地存储</span><i>✦</i></div></div>
+
+    <section class="features wrap" id="features">
+      <div class="section-head reveal"><h2>少一点手忙脚乱，<br>多一点心中有数。</h2><p>不是复杂的“大系统”，而是一套贴合店主日常动作的小工具。打开就能用，每一步都清楚。</p></div>
+      <div class="cards">
+        <article class="card reveal"><span class="num">01</span><span class="glyph">◉</span><h3>拍一张，说一句，商品快速入库</h3><p>拍吊牌、选照片或语音输入，识别后的信息随时可改，少打字，少出错。</p></article>
+        <article class="card reveal"><span class="num">02</span><span class="glyph">⌁</span><h3>扫码开单，收款出库一步完成</h3><p>连续扫描、多件合并，现金、微信、支付宝都能记。</p></article>
+        <article class="card reveal"><span class="num">03</span><span class="glyph">⌗</span><h3>尺码颜色，库存明明白白</h3><p>每件货还剩多少、卖了多少，按款式和规格随时查看。</p></article>
+        <article class="card reveal"><span class="num">04</span><span class="glyph">↗</span><h3>不只记流水，更看得懂经营</h3><p>销售额、成本、利润、库存货值自动汇总，今天生意怎么样，一眼就知道。</p></article>
+        <article class="card reveal"><span class="num">05</span><span class="glyph">▤</span><h3>标签、小票、报表，随用随出</h3><p>商品标签和销售小票支持打印，经营数据可导出与备份。</p></article>
+        <article class="card reveal"><span class="num">06</span><span class="glyph">◎</span><h3>客户与欠款，不再靠脑子记</h3><p>留住客户信息、消费记录和往来账，让熟客生意更从容。</p></article>
+      </div>
+    </section>
+
+    <section class="showcase" id="screens">
+      <div class="wrap"><div class="section-head reveal"><h2>把复杂藏起来，<br>把好用留给你。</h2><p>熟悉的操作、清晰的数字、舒服的界面，让每天都要做的事变得顺手。</p></div></div>
+      <div class="screens reveal"><div class="screen"><img src="assets/dashboard.jpg" alt="今日经营看板" width="640" height="1385" loading="lazy"></div><div class="screen"><img src="assets/camera.jpg" alt="拍照录商品" width="640" height="1385" loading="lazy"></div><div class="screen"><img src="assets/scan.jpg" alt="扫码销售" width="640" height="1385" loading="lazy"></div><div class="screen"><img src="assets/privacy.jpg" alt="本地数据与隐私设置" width="640" height="1385" loading="lazy"></div></div>
+    </section>
+
+    <section class="local wrap">
+      <div class="local-box reveal"><div><h2>你的生意数据，<br>只属于你。</h2><p>衣本万利以本地存储为主，不要求注册账号，不投放广告，也不靠追踪你来赚钱。商品、库存、销售与客户资料，安稳留在自己的设备里。</p></div><div class="checks"><div class="check"><span>不用手机号注册</span><b>✓</b></div><div class="check"><span>经营数据保存在本机</span><b>✓</b></div><div class="check"><span>支持 Face ID 应用锁</span><b>✓</b></div><div class="check"><span>可随时导出完整备份</span><b>✓</b></div></div></div>
+    </section>
+
+    <section class="cta wrap"><div class="cta-box reveal"><h2>让每一件货，<br>都心中有数。</h2><p>现在下载衣本万利，轻松开始管理你的店。</p><div class="actions" style="justify-content:center"><a class="appstore" href="https://apps.apple.com/app/%E8%A1%A3%E6%9C%AC%E4%B8%87%E5%88%A9/id6796260393" target="_blank" rel="noopener"><span class="apple"></span><span><small>Download on the</small><strong>App Store</strong></span></a></div></div></section>
+  </main>
+
+  <footer><div class="footer-inner wrap"><span>© 2026 衣本万利 · 为认真经营的你而做</span><div class="footer-links"><a href="index.html">隐私政策</a><a href="https://apps.apple.com/app/%E8%A1%A3%E6%9C%AC%E4%B8%87%E5%88%A9/id6796260393" target="_blank" rel="noopener">App Store</a></div></div></footer>
+  <script>
+    const items=document.querySelectorAll('.reveal');
+    if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});items.forEach(item=>observer.observe(item))}else{items.forEach(item=>item.classList.add('visible'))}
+  </script>
+</body>
+</html>
